@@ -1,3 +1,4 @@
+package src.main.java;
 /*
  ** Está estructurado como un array de arrays de la clase
  ** Cell

@@ -1,3 +1,5 @@
+package src.main.java;
+
 /*
  ** Es el contexto general de todo el juego
  ** Implementa el método startGame() que es el encargado

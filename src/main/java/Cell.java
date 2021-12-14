@@ -1,3 +1,4 @@
+package src.main.java;
 public class Cell{
 
     private boolean state = false;

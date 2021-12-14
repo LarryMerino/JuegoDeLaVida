@@ -1,3 +1,5 @@
+package src.main.java;
+
 /*
  ** GameMenu recibe una instancia de la clase board
  ** y se encarga de ser el intermediario entre el usuario
@@ -21,7 +23,7 @@ public class GameMenu {
         System.out.println("1. Imprimir tablero");
         System.out.println("2. Activar célula");
         System.out.println("3. Desactivar célula");
-        System.out.println("4. Limpiar panatalla");
+        System.out.println("4. Limpiar pantalla");
         System.out.println("5. Salir");
         System.out.println();
     }
