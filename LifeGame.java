@@ -11,7 +11,7 @@ public class LifeGame{
 
     public void startGame(){
         System.out.print("Introduzca la longitud del tablero: ");
-        int size = Integer.parseInt(Entrada.readLine());
+        int size = Integer.parseInt(UtilitiesStrings.readLine());
         board = new Board(size);
         board.fillBoard(); 
         board.printBoard();

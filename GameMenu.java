@@ -3,7 +3,6 @@
  ** y se encarga de ser el intermediario entre el usuario
  ** y la instacia
  */
-import java.io.Console;
 
 public class GameMenu {
 
@@ -28,12 +27,11 @@ public class GameMenu {
     }
 
     private void runOption(){
-        Console c = System.console();
         while (true) {
             System.out.println();
             printMenu(); 
             System.out.print("Opción: ");
-            String chosenOption = Entrada.readLine();
+            String chosenOption = UtilitiesStrings.readLine();
             if (isValidFormat(chosenOption)){
                 int integerChosenOption = Integer.parseInt(chosenOption.trim());
                 if (integerChosenOption == 1){
@@ -57,17 +55,17 @@ public class GameMenu {
 
     private int getValidFormatCoordinate(String dataName){
         System.out.print("Introduzca la " + dataName + ": ");
-        String input = Entrada.readLine();
+        String input = UtilitiesStrings.readLine();
         boolean isFormatAndValidInput = false;
         while (!isFormatAndValidInput){
             if (!isValidFormat(input)) {
                 System.out.print("Introduzca un formato válido: ");
-                input = Entrada.readLine();
+                input = UtilitiesStrings.readLine();
                 continue;
             }
             if (!board.isValidCoordinate(Integer.parseInt(input.trim()))){
                 System.out.print("Introduzca un número entre 1 y " + board.getSize() + ": ");
-                input = Entrada.readLine();
+                input = UtilitiesStrings.readLine();
                 continue;
             }
             isFormatAndValidInput = true;
@@ -80,6 +78,7 @@ public class GameMenu {
         int column = getValidFormatCoordinate("columna") - 1;
         board.comeAliveCell(row, column);
         System.out.println();
+        PrintSuccessMessaage();
         System.out.println("¡NUEVA CÉLULA ACTIVADA!");
 
     }
@@ -89,6 +88,7 @@ public class GameMenu {
         int column = getValidFormatCoordinate("columna") - 1;
         board.executeCell(row, column);
         System.out.println();
+        PrintSuccessMessaage();
         System.out.println("CÉLULA DESACTIVADA");
     }
 
