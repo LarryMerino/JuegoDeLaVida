@@ -81,7 +81,7 @@ public class GameMenu {
         board.comeAliveCell(row, column);
         System.out.println();
         PrintSuccessMessaage();
-        System.out.println("¡NUEVA CÉLULA ACTIVADA!");
+        System.out.println(">>> ¡CÉLULA ACTIVADA!");
 
     }
 
@@ -91,7 +91,7 @@ public class GameMenu {
         board.executeCell(row, column);
         System.out.println();
         PrintSuccessMessaage();
-        System.out.println("CÉLULA DESACTIVADA");
+        System.out.println(">>> CÉLULA DESACTIVADA");
     }
 
     private boolean isValidFormat(String chosenOption){
@@ -107,7 +107,7 @@ public class GameMenu {
     }
 
     private void PrintSuccessMessaage() {
-        System.out.println("Hecho!");
+        System.out.println(">>> ¡HECHO!");
     }
 
 }
